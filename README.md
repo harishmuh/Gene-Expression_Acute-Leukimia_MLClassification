@@ -67,6 +67,7 @@ Principal Component Analysis (PCA) is A dimensionality reduction technique that 
 ![PCA 2D visual](https://github.com/harishmuh/Gene-Expression_Acute-Leukimia_MLClassification/blob/main/PCA%202D.PNG?raw=true)
 
 **Around 95% of variance is explained by the 31 features**
+
 ![Cumulative variance explained by PCA](https://github.com/harishmuh/Gene-Expression_Acute-Leukimia_MLClassification/blob/main/Cumulative%20variance%2031%20PC%20-%20PCA.PNG?raw=true)
 
 
@@ -97,30 +98,86 @@ Principal Component Analysis (PCA) is A dimensionality reduction technique that 
 | LGBM Classifier | 0.989 | 0.982 | 
 | Random Forest Classifier |  0.986 | 0.993 |
 
-**ROC AUC Score Visualization**
-![ROC AUC Score 3 models](https://github.com/harishmuh/Gene-Expression_Acute-Leukimia_MLClassification/blob/main/ROC%20AUC%203%20models%20after%20tuning.PNG?raw=true)
-
-
 **Confusion Matrix**
 
 ![Confusion matrix 3 models](https://github.com/harishmuh/Gene-Expression_Acute-Leukimia_MLClassification/blob/main/Confusion%20matrix%203%20models.PNG?raw=true)
 
+**ROC AUC Score Visualization**
+
+![ROC AUC Score 3 models](https://github.com/harishmuh/Gene-Expression_Acute-Leukimia_MLClassification/blob/main/ROC%20AUC%203%20models%20after%20tuning.PNG?raw=true)
+
+**Model Performance Analysis (After Hyperparameter Tuning)**
+
+**XGBoost Classifier**
+
+* Before Tuning: Training accuracy of 0.868 and testing accuracy of 0.971 indicate strong generalization. Furthermore, the ROC-AUC score of 0.989 reflects excellent class discrimination, making it highly reliable for classification.
+* After Tuning: Training accuracy increased to 0.893, while testing accuracy remained at 0.971, showing no overfitting and consistent performance. The ROC-AUC score remained steady at 0.989, indicating that tuning did not significantly impact its discriminatory performance.
+
+**LGBM Classifier**
+
+* Before Tuning: Training accuracy of 0.896 and testing accuracy of 0.971 demonstrate strong initial performance. The ROC-AUC of 0.989 highlights its robust ability to differentiate between classes.
+* After Tuning: Training accuracy slightly decreased to 0.893, with testing accuracy staying at 0.971, suggesting reduced overfitting. However, the ROC-AUC decreased slightly to 0.982, indicating a slight decline in its ability to discriminate between classes.
+
+**Random Forest Classifier**
+
+* Before Tuning: Training accuracy of 0.871 and testing accuracy of 0.941 indicate moderate underfitting. The ROC-AUC of 0.986 is relatively strong but still lower than XGBoost or LGBM models.
+* After Tuning: Training accuracy significantly improved to 0.975, and testing accuracy increased to 0.971, aligning closely with the other models. The ROC-AUC rose to 0.993, making it the highest among all models and showing a marked improvement in class discrimination.
+
+
+
 **Best Model: Random Forest After Tuning**
+
+We select the **post-tuning random forest** as the final model due to the excellent performance of training and testing accuracy that matches XGBoost and LGBM, with the highest ROC-AUC (0.993) that demonstrates high discriminatory power and ensures strong generalization to unseen data.
+
+
+#### **Learning Curve**
+Learning curve is a graphical representation that shows how a models's performance changes overtime or with amount of training dataset. 
 
 **Learning Curve - Accuracy**
 
 ![Learning curve accuracy](https://github.com/harishmuh/Gene-Expression_Acute-Leukimia_MLClassification/blob/main/Learning%20curve%20accuracy.PNG?raw=true)
 
+* The model displays high variance and its overfitting the data. This has been showed by the presence of the gap between the training score and cross validation score. However, this overfitting is expected as the dataset size is small and the model has high complexity (7129 features). The high complexity of the model is the reason we want to simplify it using PCA.
+* Additionaly, The cross-validation accuracy starts lower for small training sizes but shows a slight upward improvement trend as the training set size increases. We notice after dataset of 32, we can see improvement trend.
+
 **Learning Curve - ROC AUC Score**
 
 ![Learning curve random forest](https://github.com/harishmuh/Gene-Expression_Acute-Leukimia_MLClassification/blob/main/Learning%20curve%20ROC%20AUC%20score.PNG?raw=true)
 
+* Similar to the learning curve using accuracy, the ROC-AUC learning curve also shows overfitting as the dataset is complex with 7129 features.
+* However, the cross validation scores shows improvement overtime as long as the training set size increases. The learning curve suggests that as training data increases, the model achieves more stable performance (~0.95 ROC AUC). This indicates that the model is beginning to generalize better despite the dataset's challenges.
 
-**SHAP Explanation model**
+
+### **SHAP Explanation model**
+
+SHAP or Shapley Additive exPlanations it's a method designed to help us interpret the machine learning models. To put it simple, SHAP values tell how much each feature in the dataset contributes to the prediction of the model - whether it is pushing the prediction higher or pulling it down.
+
 ![SHAP bar](https://github.com/harishmuh/Gene-Expression_Acute-Leukimia_MLClassification/blob/main/SHAP%20Bar%20Plot.PNG?raw=true)
+
+**Bar Plot Insights**
+
+This bar plot SHAP focusses specifically on the positive class (AML). 
+
+**Top most important features**
+* **PC1**: This feature has the highest mean SHAP value (~0.14), indicating it is the most influential in determining whether a patient has AML (1) or ALL (0).
+* **PC7**: This feature is the second most important, with a mean SHAP value of ~0.05.
+* Both PC1 and PC7 capture critical variance in the gene expression data, making them key predictors in the model for distinguishing between AML and ALL.
+* The other features, such as PC31, PC23, etc, have lower mean values (~0.03 or less), contributing relatively small to the model's prediction.
 
 ![SHAP Beeswarm](https://github.com/harishmuh/Gene-Expression_Acute-Leukimia_MLClassification/blob/main/SHAP%20swarm%20bee%20plot.PNG?raw=true)
 
+**Beeswarm plot insights**
+
+The beeswarm plot highlights how each feature impacts individual predictions, showing the spread of SHAP values for each feature across all samples.
+
+**Top important features**
+* **PC1** and **PC7** are again identified as the most critical features, with PC1 being the dominant factor influencing predictions.
+* PCI Shows a wide range of SHAP values, spanning both positive and negative impacts on model predictions. The gradient in the feature value (from blue to pink) suggests that higher values of PC1 push predictions towards AML (1), while lower values lean towards ALL (0).
+* PC7 Also shows variability in SHAP values, but with a smaller range compared to PC1.
+
+**PC gene components**
+
+Based on previous step, we know that both PC1 and PC7 are the most important features for model prediction. In this step, we want to breakdown the original features or gene components that contributes to principal components, PC1 and PC7.
 
 
 **PC1 Gene Components**
