@@ -236,4 +236,5 @@ X80754_at (GTP-binding protein), D86968_at (KIAA0213 gene, partial cds)
   * PC7 contain several genes such as M13981_at (INHA Inhibin, alpha gene),	X82494_at (FBLN2 Fibulin 2 gene), X07384_at (GLI Glioma-associated oncogene homolog (zinc finger protein) gene),	U79266_at (Clone 23627 mRNA gene), U84569_at (YF5 mRNA gene), X17651_at (MYOG Myogenin (myogenic factor 4) gene), AF001359_f_at (GB DEF = DNA mismatch repair protein (hMLH1) mRNA gene), L48516_at (GB DEF = Paraoxonase 3 (PON3) mRNA gene),	V00574_s_at (genomic clones lambda-[SK2-T2, HS578T]; cDNA clones RS-[3,4, 6]) c-Ha-ras1 proto-oncogene, M32879_at (CYP11B1 Cytochrome P450 11 beta gene)
 
 ## **Assets**
-* [Google colab Notebook](https://github.com/harishmuh/Gene-Expression_Acute-Leukimia_MLClassification/blob/main/Gene_Expression_Acute_Leukimia_Classification.ipynb)
+* [Jupyter notebook](https://github.com/harishmuh/Gene-Expression_Acute-Leukimia_MLClassification/blob/main/Gene_expression_AcuteLeukimia_classification.ipynb)
+* [Google colab notebook](https://github.com/harishmuh/Gene-Expression_Acute-Leukimia_MLClassification/blob/main/Gene_Expression_Acute_Leukimia_Classification.ipynb)
