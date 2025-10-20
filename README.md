@@ -53,6 +53,7 @@ We want to analyze data to learn about patterns that can differentiate which pat
 ## **Results**
 
 **Data Understanding and EDA**
+
 Based on our observation, we can get some understanding of the gene expression dataset as
 * The dataset contains 72 rows (number of patients) and 7129 features. The high number of features can cause curse of dimensionality that potentially makes overfitting and inhibit generalization.
 * Many features of the dataset have assymetric distribution (3250 features) and 2959 features contain high percentage of extreme values or outliers. These outliers need to be treated before generating machine learning models.
