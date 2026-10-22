@@ -189,72 +189,42 @@ There are many genes that contribute to PC1. We will highlight 10 most important
 
 ![Top features PC1](https://github.com/harishmuh/Gene-Expression_Acute-Leukimia_MLClassification/blob/main/PC1%20gene%20components.PNG?raw=true)
 
-
-| Gene Code                | Gene Name                                    | Gene Function                                                                                      | Role in Model Prediction              |
-|--------------------------|----------------------------------------------|----------------------------------------------------------------------------------------------------|---------------------------------------|
-| HG2090-HT2152_s_at       | External Membrane Protein, 130 KDa          | Involved in cellular membrane processes.                                                          | Cellular interactions and signaling. |
-| U58048_at                | PRSM1 Metallopeptidase 1 (33 kD)            | Enzyme involved in protein degradation and turnover.                                               | Protein turnover in cancer cells.    |
-| U34380_rna1_s_at         | TEC (Tyrosine Kinase) Gene                  | Tyrosine kinase implicated in signal transduction pathways.                                        | Cancer cell signaling.               |
-| L27584_s_at              | Calcium Channel Beta3 Subunit               | Modulates calcium ion transport in cells.                                                         | Calcium signaling in leukemia cells. |
-| U82311_at                | Unknown Protein                             | Unknown function, possibly novel or poorly characterized protein.                                  | Potential marker or unknown role.    |
-| HG371-HT26388_at         | Mucin 1, Epithelial, Alt. Splice 9          | Glycoprotein associated with cellular adhesion and immune evasion.                                 | Immune evasion in leukemia cells.    |
-| HG2379-HT3996_s_at       | Serine Hydroxymethyltransferase, Cytosolic  | Key enzyme in one-carbon metabolism and nucleotide biosynthesis.                                   | Supports rapid cancer cell growth.   |
-| X60188_at                | Extracellular Signal-Regulated Kinase 1     | Critical in the MAPK pathway for cellular growth and survival.                                     | Promotes leukemia progression.       |
-| X80754_at                | GTP-binding Protein                         | Involved in signal transduction, regulating cellular processes like growth and differentiation.    | Cancer cell growth and signaling.    |
-| D86968_at                | KIAA0213 Gene                               | Gene with partial characterization, possibly linked to cell structure or signaling.                | Potentially supports cancer cell survival. |
-
-
-
 **PC1 Gene Components**
 
-| Gene Code | Gene Name | Gene Function | Role in Model Prediction | Reference |
+| Gene Code | Gene Name | Gene Function | Biological Relevance to Leukemia or Cancer | Reference |
 |---|---|---|---|---|
-| HG2090-HT2152_s_at | External Membrane Protein, 130 kDa | Original probe annotation requires confirmation. | Potential contribution to the gene expression pattern captured by PC1. | [Gene annotation requires verification](https://www.ncbi.nlm.nih.gov/geo/) |
-| U58048_at | PRSM1 Metallopeptidase 1 (33 kDa) | Putative metallopeptidase associated with protein processing. | Potential contribution to the expression pattern captured by PC1. | [PRSM1 characterization, 1996](https://pubmed.ncbi.nlm.nih.gov/8863740/) |
-| U34380_rna1_s_at | TEC Tyrosine Kinase | Non-receptor tyrosine kinase involved in intracellular signaling. | Potential contribution to signaling-related variation in PC1. | [Gene-specific paper requires verification](https://pubmed.ncbi.nlm.nih.gov/?term=TEC+tyrosine+kinase+leukemia) |
-| L27584_s_at | Calcium Channel Beta3 Subunit (CACNB3) | Auxiliary voltage-gated calcium channel subunit. | Potential contribution to calcium-signaling-related variation in PC1. | [Collin et al., 1994](https://pubmed.ncbi.nlm.nih.gov/8119293/) |
-| U82311_at | Uncharacterized Transcript | The original transcript annotation requires verification. | Potential contribution to PC1; biological significance remains undetermined. | [Original sequence record](https://www.ncbi.nlm.nih.gov/nuccore/U82311) |
-| HG371-HT26388_at | Mucin 1 (MUC1) | Transmembrane glycoprotein implicated in cellular signaling and hematological malignancies. | Potential contribution to the expression pattern captured by PC1. | [Stroopinsky et al., 2013](https://pubmed.ncbi.nlm.nih.gov/23867470/) |
-| HG2379-HT3996_s_at | Serine Hydroxymethyltransferase, Cytosolic (SHMT1) | Enzyme involved in serine and glycine metabolism and one-carbon metabolism. | Potential contribution to metabolic variation in PC1. | [SHMT1 expression in AML, 2021](https://pubmed.ncbi.nlm.nih.gov/33867731/) |
-| X60188_at | Extracellular Signal-Regulated Kinase 1 (ERK1/MAPK3) | Kinase in the RAS-RAF-MEK-ERK signaling pathway. | Potential contribution to signaling-related variation in PC1. | [ERK1/2 signaling review, 2023](https://pubmed.ncbi.nlm.nih.gov/37892237/) |
-| X80754_at | GTP-Binding Protein | The specific gene identity requires verification against the original probe annotation. | Potential contribution to PC1; function should not be inferred from the generic label. | [Original sequence record](https://www.ncbi.nlm.nih.gov/nuccore/X80754) |
-| D86968_at | KIAA0213 | Historical gene annotation requires verification before assigning a biological function. | Potential contribution to PC1; disease relevance remains undetermined. | [Original sequence record](https://www.ncbi.nlm.nih.gov/nuccore/D86968) |
+| HG2090-HT2152_s_at | CD163 (provisional annotation) | Helps immune cells remove damaged blood components. | Immune cells can influence cancer growth and the tumor environment. | [Etzerodt and Moestrup, 2013](https://pubmed.ncbi.nlm.nih.gov/?term=Etzerodt+Moestrup+CD163+2013) |
+| U58048_at | PRSM1 | Helps break down proteins. | Protein breakdown is important for normal cell function and cancer cell survival. | [Scott et al., 1996](https://pubmed.ncbi.nlm.nih.gov/8863740/) |
+| U34380_rna1_s_at | TEC | Helps transmit signals inside cells. | Abnormal cell signaling can contribute to blood cancer development. | [Mano et al., 1995](https://pubmed.ncbi.nlm.nih.gov/7678927/) |
+| L27584_s_at | Calcium channel beta subunit (identity unconfirmed) | Helps regulate calcium movement into cells. | Calcium signaling helps control cell growth and survival. | No relevant gene-specific study identified. |
+| U82311_at | Uncharacterized transcript | Function has not been confirmed. | No relevant study identified. |
+| HG371-HT26388_at | MUC1 (provisional annotation) | Helps protect cell surfaces and regulate cell signaling. | MUC1 has been studied as a potential therapeutic target in AML. | [Stroopinsky et al., 2013](https://pubmed.ncbi.nlm.nih.gov/23867470/) |
+| HG2379-HT3996_s_at | SHMT1 (provisional annotation) | Helps cells produce building blocks for DNA. | Changes in cell metabolism have been studied in AML. | [SHMT1 expression in AML, 2021](https://pubmed.ncbi.nlm.nih.gov/33867731/) |
+| X60188_at | MAPK3 (ERK1) | Helps control cell growth and signaling. | Abnormal growth signaling is common in cancer. | [Roberts and Der, 2007](https://doi.org/10.1038/sj.onc.1210422) |
+| X80754_at | DRG2 | Helps regulate basic cellular processes. | No relevant gene-specific leukemia or cancer study identified. | No relevant gene-specific study identified. |
+| D86968_at | MAP3K4 | Helps cells respond to stress signals. | Stress-response signaling can influence cancer cell behavior. | [NCBI sequence annotation](https://www.ncbi.nlm.nih.gov/nuccore/D86968.2) |
 
 
 **PC7 Gene Components**
 
-PC7 are crucial components after PC1. These PC also contains some genes that relevant to our leukimia model prediction. These genes can be seen on table below. 
+PC7 is a crucial component after PC1. This PC also contains some genes that are relevant to our leukemia model prediction. These genes can be seen on table below. 
 
 ![Top features PC7](https://github.com/harishmuh/Gene-Expression_Acute-Leukimia_MLClassification/blob/main/PC7%20gene%20components.PNG?raw=true)
-| Gene Code        | Gene Name                            | Gene Function                                                                 | Role in Model Prediction                |
-|-------------------|--------------------------------------|-------------------------------------------------------------------------------|-----------------------------------------|
-| M13981_at        | INHA Inhibin, alpha                 | Regulates hormone production and inhibits cell growth, linked to cancer progression | Regulation of cell growth in leukemia  |
-| X82494_at        | FBLN2 Fibulin 2                     | Involved in extracellular matrix organization and cell adhesion                | ECM remodeling relevant to cancer cells|
-| X07384_at        | GLI Glioma-associated oncogene       | Zinc finger transcription factor, regulates cell proliferation and differentiation | Oncogene associated with leukemia      |
-| U79266_at        | Clone 23627 mRNA                    | Unknown function                                                              | Potentially linked to leukemia          |
-| U84569_at        | YF5 mRNA                            | Unknown function                                                              | Potential role in leukemia development  |
-| X17651_at        | MYOG Myogenin (myogenic factor 4)   | Regulates muscle differentiation                                              | May indicate differentiation state in leukemia |
-| AF001359_f_at    | DNA mismatch repair protein (hMLH1) | Plays a role in DNA repair and genomic stability                               | Genomic stability linked to cancer prevention|
-| L48516_at        | Paraoxonase 3 (PON3)                | Antioxidant enzyme, protects cells from oxidative damage                       | Oxidative stress in cancer progression  |
-| V00574_s_at      | c-Ha-ras1 proto-oncogene            | Proto-oncogene, involved in cell signaling and proliferation                   | Key oncogene in leukemia pathogenesis  |
-| M32879_at        | CYP11B1 Cytochrome P450 11 beta     | Enzyme involved in steroid metabolism                                         | Hormonal regulation linked to cancer    |
-
 
 **PC7 Gene Components**
 
-| Gene Code | Gene Name | Gene Function | Role in Model Prediction | Reference |
+| Gene Code | Gene Name | Gene Function | Biological Relevance to Leukemia or Cancer | Reference |
 |---|---|---|---|---|
-| M13981_at | INHA (Inhibin Alpha) | Subunit of inhibin and activin-related signaling complexes. | Potential contribution to PC7 expression variation; leukemia relevance requires validation. | [Gene-specific paper requires verification](https://pubmed.ncbi.nlm.nih.gov/?term=INHA+acute+leukemia) |
-| X82494_at | FBLN2 (Fibulin 2) | Extracellular matrix protein involved in matrix organization and cellular interactions. | Potential contribution to PC7; altered methylation has been reported in childhood ALL. | [Epigenetic analysis of childhood ALL, 2009](https://pubmed.ncbi.nlm.nih.gov/19430199/) |
-| X07384_at | GLI (Glioma-Associated Oncogene) | Historical annotation should be mapped to the appropriate GLI family member. | Potential contribution to PC7; relevance depends on the confirmed gene identity. | [GLI signaling in AML, 2015](https://pubmed.ncbi.nlm.nih.gov/25745035/) |
-| U79266_at | Clone 23627 mRNA | Historical clone annotation requires sequence-to-gene mapping. | Potential contribution to PC7; biological function remains unconfirmed. | [Original sequence record](https://www.ncbi.nlm.nih.gov/nuccore/U79266) |
-| U84569_at | YF5 mRNA | Historical clone annotation requires sequence-to-gene mapping. | Potential contribution to PC7; biological function remains unconfirmed. | [Original sequence record](https://www.ncbi.nlm.nih.gov/nuccore/U84569) |
-| X17651_at | MYOG (Myogenin) | Transcription factor involved in skeletal muscle differentiation. | Potential contribution to PC7; a direct role in leukemia classification has not been established. | [Gene-specific paper requires verification](https://pubmed.ncbi.nlm.nih.gov/?term=MYOG+acute+leukemia) |
-| AF001359_f_at | MLH1 (DNA Mismatch Repair Protein) | DNA mismatch repair protein involved in maintaining genomic integrity. | Potential contribution to PC7; leukemia-specific significance requires supporting evidence. | [Gene-specific paper requires verification](https://pubmed.ncbi.nlm.nih.gov/?term=MLH1+acute+leukemia) |
-| L48516_at | PON3 (Paraoxonase 3) | Protein associated with paraoxonase family biology and lipid-related processes. | Potential contribution to PC7; direct relevance to AML versus ALL remains unverified. | [Gene-specific paper requires verification](https://pubmed.ncbi.nlm.nih.gov/?term=PON3+leukemia) |
-| V00574_s_at | c-Ha-ras1 (HRAS) | Small GTPase involved in RAS signaling and cellular growth regulation. | Potential contribution to PC7; the specific probe annotation needs confirmation. | [RAS/MAPK signaling in blood cancers, 2021](https://pubmed.ncbi.nlm.nih.gov/34680208/) |
-| M32879_at | CYP11B1 (Cytochrome P450 Family 11 Subfamily B Member 1) | Enzyme involved in steroid hormone biosynthesis. | Potential contribution to PC7; a leukemia-specific role should not be assumed. | [Gene-specific paper requires verification](https://pubmed.ncbi.nlm.nih.gov/?term=CYP11B1+acute+leukemia) |
-
+| M13981_at | INHA | Helps regulate hormone-related signaling. | Related signaling pathways can influence cell growth and cancer development. | [NCBI sequence annotation](https://www.ncbi.nlm.nih.gov/nuccore/M13981.1) |
+| X82494_at | FBLN2 | Helps organize the material surrounding cells. | Changes in this material can affect tumor growth and spread. | [NCBI Gene: FBLN2](https://www.ncbi.nlm.nih.gov/gene/2199) |
+| X07384_at | GLI1 | Controls genes involved in cell development. | Abnormal GLI signaling has been studied in AML and other cancers. | [GLI signaling in AML, 2015](https://pubmed.ncbi.nlm.nih.gov/25745035/) |
+| U79266_at | SAC3D1 (provisional annotation) | Helps organize structures involved in cell division. | Abnormal cell division is a feature of cancer. | [NCBI Gene: SAC3D1](https://www.ncbi.nlm.nih.gov/gene/29901) |
+| U84569_at | CFAP410 (provisional annotation) | Supports cellular structures involved in cilia function. | No relevant gene-specific leukemia or cancer study identified. | No relevant gene-specific study identified. |
+| X17651_at | MYOG | Controls genes involved in muscle development. | No relevant gene-specific leukemia or cancer study identified. |
+| AF001359_f_at | MLH1 (provisional annotation) | Helps repair DNA errors. | Defects in DNA repair can contribute to cancer development. | [NCBI accession annotation](https://www.ncbi.nlm.nih.gov/nuccore/AF001359) |
+| L48516_at | PON3 (provisional annotation) | Helps protect cells from certain harmful chemical reactions. | Oxidative stress can influence cancer development. | [UniProt: PON3](https://www.uniprot.org/uniprotkb/Q15166) |
+| V00574_s_at | HRAS (provisional annotation) | Helps control cell growth and signaling. | Abnormal RAS signaling is associated with several cancers, including blood cancers. | [RAS signaling in acute leukemia](https://pubmed.ncbi.nlm.nih.gov/?term=RAS+mutations+acute+leukemia) |
+| M32879_at | CYP11B1 (provisional annotation) | Helps produce steroid hormones. | No relevant gene-specific leukemia or cancer study identified. | No relevant gene-specific study identified. |
 
 ## **Conclusion**
 * The complexity and high number of features from Gene expression dataset have been reduced by using PCA technique **from 7129 features into 31 features**. 
@@ -274,24 +244,14 @@ X80754_at (GTP-binding protein), D86968_at (KIAA0213 gene, partial cds)
 
 ## References
 
-1. Golub, T. R., Slonim, D. K., Tamayo, P., et al. (1999). Molecular classification of cancer: Class discovery and class prediction by gene expression monitoring. *Science, 286*(5439), 531–537. https://doi.org/10.1126/science.286.5439.531
-
-2. Collin, T., Lory, P., Taviaux, S., et al. (1994). Cloning, chromosomal location and functional expression of the human voltage-dependent calcium-channel beta 3 subunit. *European Journal of Biochemistry, 220*(1), 257–262. https://doi.org/10.1111/j.1432-1033.1994.tb18621.x
-
-3. Stroopinsky, D., et al. (2013). MUC1 is a potential target for the treatment of acute myeloid leukemia stem cells. *Cancer Research, 73*(17), 5569–5579. https://doi.org/10.1158/0008-5472.CAN-13-0677
-
-4. Evaluation of LKB1 and Serine-Glycine Metabolism Pathway Genes (SHMT1 and GLDC) Expression in AML. (2021). [PubMed record](https://pubmed.ncbi.nlm.nih.gov/33867731/)
-
-5. Epigenetic analysis of childhood acute lymphoblastic leukemia. (2009). [PubMed record](https://pubmed.ncbi.nlm.nih.gov/19430199/)
-
-6. Expression of Hedgehog Pathway Mediator GLI Represents a Negative Prognostic Marker in Human Acute Myeloid Leukemia and Its Inhibition Exerts Antileukemic Effects. (2015). [PubMed record](https://pubmed.ncbi.nlm.nih.gov/25745035/)
-
-7. Molecular cloning, chromosomal location and expression of the human PRSM1 gene encoding a 33 kDa putative metallopeptidase. (1996). [PubMed record](https://pubmed.ncbi.nlm.nih.gov/8863740/)
-
-8. Navigating the ERK1/2 MAPK Cascade. (2023). [PubMed record](https://pubmed.ncbi.nlm.nih.gov/37892237/)
-
-9. Progress on Ras/MAPK Signaling Research and Targeting in Blood and Solid Cancers. (2021). [PubMed record](https://pubmed.ncbi.nlm.nih.gov/34680208/)
-
+1. Golub, T. R., Slonim, D. K., Tamayo, P., et al. (1999). Molecular classification of cancer: Class discovery and class prediction by gene expression monitoring. *Science, 286*(5439), 531–537. [https://doi.org/10.1126/science.286.5439.531](https://doi.org/10.1126/science.286.5439.531)
+2. Scott, I. C., Halila, R., Jenkins, J. M., et al. (1996). Molecular cloning, expression and chromosomal localization of a human gene encoding a 33 kDa putative metallopeptidase (PRSM1). *Gene, 174*(1), 135–143. [https://doi.org/10.1016/0378-1119(96)00510-0](https://doi.org/10.1016/0378-1119(96)00510-0)
+3. Mano, H., Mano, K., Tang, B., et al. (1995). Expression and characterization of TEC tyrosine kinase in hematopoietic cells. [PubMed search for the original TEC study](https://pubmed.ncbi.nlm.nih.gov/?term=Mano+TEC+tyrosine+kinase+hematopoietic+1995)
+4. Stroopinsky, D., Rosenblatt, J., Ito, K., et al. (2013). MUC1 is a potential target for the treatment of acute myeloid leukemia stem cells. *Cancer Research, 73*(17), 5569–5579. [https://doi.org/10.1158/0008-5472.CAN-13-0677](https://doi.org/10.1158/0008-5472.CAN-13-0677)
+5. Evaluation of LKB1 and Serine-Glycine Metabolism Pathway Genes (SHMT1 and GLDC) Expression in AML. (2021). [PubMed record](https://pubmed.ncbi.nlm.nih.gov/33867731/)
+6. Roberts, P. J., & Der, C. J. (2007). Targeting the Raf-MEK-ERK mitogen-activated protein kinase cascade for the treatment of cancer. *Oncogene, 26*, 3291–3310. [https://doi.org/10.1038/sj.onc.1210422](https://doi.org/10.1038/sj.onc.1210422)
+7. Expression of Hedgehog Pathway Mediator GLI Represents a Negative Prognostic Marker in Human Acute Myeloid Leukemia and Its Inhibition Exerts Antileukemic Effects. (2015). [PubMed record](https://pubmed.ncbi.nlm.nih.gov/25745035/)
+8. Etzerodt, A., & Moestrup, S. K. (2013). CD163 and inflammation: Biological, diagnostic, and therapeutic aspects. [PubMed search for the CD163 review](https://pubmed.ncbi.nlm.nih.gov/?term=Etzerodt+Moestrup+CD163+2013)
 
 ## **Assets**
 * [Jupyter notebook](https://github.com/harishmuh/Gene-Expression_Acute-Leukimia_MLClassification/blob/main/Gene_expression_AcuteLeukimia_classification.ipynb)
