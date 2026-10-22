@@ -226,20 +226,23 @@ PC7 is a crucial component after PC1. This PC also contains some genes that are 
 | V00574_s_at | HRAS (provisional annotation) | Helps control cell growth and signaling. | Abnormal RAS signaling is associated with several cancers, including blood cancers. | [RAS signaling in acute leukemia](https://pubmed.ncbi.nlm.nih.gov/?term=RAS+mutations+acute+leukemia) |
 | M32879_at | CYP11B1 (provisional annotation) | Helps produce steroid hormones. | No relevant gene-specific leukemia or cancer study identified. | No relevant gene-specific study identified. |
 
+  
 ## **Conclusion**
-* The complexity and high number of features from Gene expression dataset have been reduced by using PCA technique **from 7129 features into 31 features**. 
-* The prediction model has been built using the **post-tuning random forest model** that shows excellent performance on the testing dataset **(0.971 accuracy)**. This result matches the other high-performing models, such as XGBoost and LGBM. Additionally, this model achieves the **highest ROC-AUC score (0.993)** that also demonstrates high discriminatory power and ensures strong generalization to unseen data.
-* The best parameters of this tuned random forest model consist of,
-  * n_estimators: 300
-  * min_samples_split: 5
-  * min_samples_leaf: 1
-  * max_features': 'log2'
-  * max_depth': 30
-  * model__bootstrap': True
-* Based on the SHAP explanation model, the most important features come from the principal components of **PC1** and **PC7**.
-  * PC1 contain several genes such as HG2090-HT2152_s_at (External Membrane Protein, 130 Kda (Gb:Z22971)), U58048_at (PRSM1 Metallopeptidase 1 (33 kD)), U34380_rna1_s_at (TEC gene extracted from Human protein tyrosine kinase TEC (tec) gene), L27584_s_at (CAB3b mRNA for calcium channel beta3 subunit), U82311_at (GB DEF = Unknown protein mRNA, partial cds), HG371-HT26388_at (Mucin 1, Epithelial, Alt. Splice 9), HG2379-HT3996_s_at (Serine Hydroxymethyltransferase, Cytosolic, Alt. Splice 2), X60188_at (Extracellular signal-regulated Kinase 1 gene)		
-X80754_at (GTP-binding protein), D86968_at (KIAA0213 gene, partial cds)
-  * PC7 contain several genes such as M13981_at (INHA Inhibin, alpha gene),	X82494_at (FBLN2 Fibulin 2 gene), X07384_at (GLI Glioma-associated oncogene homolog (zinc finger protein) gene),	U79266_at (Clone 23627 mRNA gene), U84569_at (YF5 mRNA gene), X17651_at (MYOG Myogenin (myogenic factor 4) gene), AF001359_f_at (GB DEF = DNA mismatch repair protein (hMLH1) mRNA gene), L48516_at (GB DEF = Paraoxonase 3 (PON3) mRNA gene),	V00574_s_at (genomic clones lambda-[SK2-T2, HS578T]; cDNA clones RS-[3,4, 6]) c-Ha-ras1 proto-oncogene, M32879_at (CYP11B1 Cytochrome P450 11 beta gene)
+
+This project developed a machine learning approach to classify acute myeloid leukemia (AML) and acute lymphoblastic leukemia (ALL) using gene expression data from 72 patients and 7,129 features.
+
+**Key findings**
+
+* **Dimensionality reduction:** Principal Component Analysis (PCA) reduced the 7,129 original features to 31 principal components, which together explained approximately 95% of the variance in the data.
+* **Model performance:** The tuned Random Forest achieved a reported test accuracy of 0.971 and a ROC AUC of 0.993, outperforming the other evaluated models in ROC AUC. These results indicate strong discrimination on the evaluated test set but require further validation before they can establish performance on independent patient populations.
+* **Model interpretation:** SHAP analysis identified PC1 and PC7 as the most influential features in the Random Forest model. These components summarize patterns across multiple gene expression measurements.
+* **Biological interpretation:** The gene tables examine the known functions and potential cancer relevance of selected genes contributing to PC1 and PC7. These annotations provide biological context but do not establish that individual genes independently drive the model's predictions or distinguish AML from ALL.
+
+**Limitations and future directions**
+
+* The dataset contains relatively few patients compared with the number of original features, which limits the conclusions that can be drawn about generalizability. In addition, the gene annotations and their reported biological relevance require careful verification against the original microarray platform and supporting literature.
+* Further validation using independent patient cohorts would help determine whether the observed classification performance generalizes beyond this dataset. Additional biological investigation could also establish whether the genes associated with the influential principal components have reproducible relevance to leukemia classification.
+
 
 
 ## References
