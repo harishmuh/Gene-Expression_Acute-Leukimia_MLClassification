@@ -260,3 +260,4 @@ This project developed a machine learning approach to classify acute myeloid leu
 * [Jupyter notebook](https://github.com/harishmuh/Gene-Expression_Acute-Leukimia_MLClassification/blob/main/Gene_expression_AcuteLeukimia_classification.ipynb)
 * [Google colab notebook](https://colab.research.google.com/github/harishmuh/Gene-Expression_Acute-Leukimia_MLClassification/blob/main/Gene_Expression_Acute_Leukimia_Classification.ipynb)
 * [Google colab notebook - Heatmap and Clustermap significant gene visualization](https://github.com/harishmuh/Gene-Expression_Acute-Leukimia_MLClassification/blob/main/Heatmap_visualization_Acute_leukemia_AML_VS_ALL.ipynb)
+* Slide - Machine Learning application to predict the subtype of acute leukemia (ALL and AML) by using gen expression data → [Open Slide](https://github.com/harishmuh/BNSP_Data-Scientist-Certification/blob/main/15_30_Use%20case_Acute%20Leukemia%20Classification.pdf)
